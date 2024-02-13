@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="IE=7">
+
+          <title>Interactive Geometry Genius</title>
+          <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/176/176244.png" type="image/x-icon">
+
+          <!-- Tailwind css and daisyUI CDN -->
+          <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+          <script src="https://cdn.tailwindcss.com"></script>
+
+          <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+          <header></header>
+          <main class="container mx-auto px-4">
+                    <div class="geometry-container lg:flex gap-x-4">
+                              <div class="calculation-container grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 md:flex-1 place-items-center mb-12">
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full">
+                                                  <figure><img class="pt-12" src="./images/triangle.png"
+                                                                      alt="Shoes" /></figure>
+                                                  <div class="card-body text-center pb-12 px-8">
+                                                            <h2 class="text-center">Triangle</h2>
+                                                            <p>Area (A) = 0.5 X b X h</p>
+                                                            <form id="calculate" onsubmit="calculateEveryThing(event,calculateTriangle,'base','height','Triangle')">
+                                                                      <div class="space-x-2">
+                                                                                <input class="w-24 bg-inputBg outline-none" type="number" placeholder="b" id="base" required>
+                                                                                <span>cm</span>
+                                                                                <input class="w-24 bg-inputBg outline-none" type="number" placeholder="h" id="height" required>
+                                                                                <span>cm</span>
+                                                                      </div>
+                                                                      <div class="card-actions justify-center pt-12">
+                                                                                <button type="submit" id="calculateBtn" class="btn bg-buttonBg border-none w-full text-white">Calculate</button>
+                                                                      </div>
+                                                            </form>
+                                                  </div>
+                                        </div>
+                                        <div class="card max-w-96 bg-base-100 shadow-xl">
+                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                                                      alt="Shoes" /></figure>
+                                                  <div class="card-body">
+                                                            <h2 class="card-title">Shoes!</h2>
+                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                                            <div class="card-actions justify-end">
+                                                                      <button class="btn btn-primary">Buy Now</button>
+                                                            </div>
+                                                  </div>
+                                        </div>
+                                        <div class="card max-w-96 bg-base-100 shadow-xl">
+                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                                                      alt="Shoes" /></figure>
+                                                  <div class="card-body">
+                                                            <h2 class="card-title">Shoes!</h2>
+                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                                            <div class="card-actions justify-end">
+                                                                      <button class="btn btn-primary">Buy Now</button>
+                                                            </div>
+                                                  </div>
+                                        </div>
+                                        <div class="card max-w-96 bg-base-100 shadow-xl">
+                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                                                      alt="Shoes" /></figure>
+                                                  <div class="card-body">
+                                                            <h2 class="card-title">Shoes!</h2>
+                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                                            <div class="card-actions justify-end">
+                                                                      <button class="btn btn-primary">Buy Now</button>
+                                                            </div>
+                                                  </div>
+                                        </div>
+                                        <div class="card max-w-96 bg-base-100 shadow-xl">
+                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                                                      alt="Shoes" /></figure>
+                                                  <div class="card-body">
+                                                            <h2 class="card-title">Shoes!</h2>
+                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                                            <div class="card-actions justify-end">
+                                                                      <button class="btn btn-primary">Buy Now</button>
+                                                            </div>
+                                                  </div>
+                                        </div>
+                                        <div class="card max-w-96 bg-base-100 shadow-xl">
+                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                                                      alt="Shoes" /></figure>
+                                                  <div class="card-body">
+                                                            <h2 class="card-title">Shoes!</h2>
+                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
+                                                            <div class="card-actions justify-end">
+                                                                      <button class="btn btn-primary">Buy Now</button>
+                                                            </div>
+                                                  </div>
+                                        </div>
+                              </div>
+                              <div id="result" class="result-container lg:w-3/12 h-96 rounded-lg border border-solid border-borderColor pl-6">
+                                        <div class="show-calculation">
+                                                  <h4 class="text-center text-xl text-black underline font-bold">Area Calculation</h4>
+                                        </div>
+                              </div>
+                    </div>
+          </main>
+          <footer></footer>
+<script src="./js/index.js"></script>
+</body>
+
+</html>
