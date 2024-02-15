@@ -21,17 +21,17 @@
           <main class="container mx-auto px-4">
                     <div class="geometry-container lg:flex gap-x-4">
                               <div class="calculation-container grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-4 md:flex-1 place-items-center mb-12">
-                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full">
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full hover:bg-hoverBg text-textColor">
                                                   <figure><img class="pt-12" src="./images/triangle.png"
                                                                       alt="Shoes" /></figure>
                                                   <div class="card-body text-center pb-12 px-8">
-                                                            <h2 class="text-center">Triangle</h2>
+                                                            <h2 class="text-center text-2xl font-bold">Triangle</h2>
                                                             <p>Area (A) = 0.5 X b X h</p>
                                                             <form id="calculate" onsubmit="calculateEveryThing(event,calculateTriangle,'base','height','Triangle')">
                                                                       <div class="space-x-2">
-                                                                                <input class="w-24 bg-inputBg outline-none" type="number" placeholder="b" id="base" required>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="b" id="base" required>
                                                                                 <span>cm</span>
-                                                                                <input class="w-24 bg-inputBg outline-none" type="number" placeholder="h" id="height" required>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="h" id="height" required>
                                                                                 <span>cm</span>
                                                                       </div>
                                                                       <div class="card-actions justify-center pt-12">
@@ -40,64 +40,104 @@
                                                             </form>
                                                   </div>
                                         </div>
-                                        <div class="card max-w-96 bg-base-100 shadow-xl">
-                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full hover:bg-hoverBg text-textColor">
+                                                  <figure><img class="pt-12" src="./images/rectangle.png"
                                                                       alt="Shoes" /></figure>
-                                                  <div class="card-body">
-                                                            <h2 class="card-title">Shoes!</h2>
-                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                                                            <div class="card-actions justify-end">
-                                                                      <button class="btn btn-primary">Buy Now</button>
-                                                            </div>
+                                                  <div class="card-body text-center pb-12 px-8">
+                                                            <h2 class="text-center text-2xl font-bold">Reatangle</h2>
+                                                            <p>Area (A) = 0.5 X w X l</p>
+                                                            <form id="calculate" onsubmit="calculateEveryThing(event,calculateReatangle,'width','length','Rectangle')">
+                                                                      <div class="space-x-2">
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="w" id="width" required>
+                                                                                <span>cm</span>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="l" id="length" required>
+                                                                                <span>cm</span>
+                                                                      </div>
+                                                                      <div class="card-actions justify-center pt-12">
+                                                                                <button type="submit" id="calculateBtn" class="btn bg-buttonBg border-none w-full text-white">Calculate</button>
+                                                                      </div>
+                                                            </form>
                                                   </div>
                                         </div>
-                                        <div class="card max-w-96 bg-base-100 shadow-xl">
-                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full hover:bg-hoverBg text-textColor">
+                                                  <figure><img class="pt-12" src="./images/parallelogram.png"
                                                                       alt="Shoes" /></figure>
-                                                  <div class="card-body">
-                                                            <h2 class="card-title">Shoes!</h2>
-                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                                                            <div class="card-actions justify-end">
-                                                                      <button class="btn btn-primary">Buy Now</button>
-                                                            </div>
+                                                  <div class="card-body text-center pb-12 px-8">
+                                                            <h2 class="text-center text-2xl font-bold">Parallelogram</h2>
+                                                            <p>Area (A) = b X h</p>
+                                                            <form id="calculate" onsubmit="calculateEveryThing(event,calculateParallelogram,'pbase','pheight','Parallelogram')">
+                                                                      <div class="space-x-2">
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="b" id="pbase" required>
+                                                                                <span>cm</span>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="h" id="pheight" required>
+                                                                                <span>cm</span>
+                                                                      </div>
+                                                                      <div class="card-actions justify-center pt-12">
+                                                                                <button type="submit" id="calculateBtn" class="btn bg-buttonBg border-none w-full text-white">Calculate</button>
+                                                                      </div>
+                                                            </form>
                                                   </div>
                                         </div>
-                                        <div class="card max-w-96 bg-base-100 shadow-xl">
-                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full hover:bg-hoverBg2 text-textColor">
+                                                  <figure><img class="pt-12" src="./images/rhombus.png"
                                                                       alt="Shoes" /></figure>
-                                                  <div class="card-body">
-                                                            <h2 class="card-title">Shoes!</h2>
-                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                                                            <div class="card-actions justify-end">
-                                                                      <button class="btn btn-primary">Buy Now</button>
-                                                            </div>
+                                                  <div class="card-body text-center pb-12 px-8">
+                                                            <h2 class="text-center font-bold text-2xl">Rhombus</h2>
+                                                            <p>Area (A) = 0.5 X d<sub>1</sub> X d<sub>2</sub></p>
+                                                            <form id="calculate" onsubmit="calculateEveryThing(event,calculateRhombus,'d1','d2','Rhombus')">
+                                                                      <div class="space-x-2">
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="d"  id="d1" required>
+                                                                                <span>cm</span>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="d" id="d2" required>
+                                                                                <span>cm</span>
+                                                                      </div>
+                                                                      <div class="card-actions justify-center pt-12">
+                                                                                <button type="submit" id="calculateBtn" class="btn bg-buttonBg border-none w-full text-white">Calculate</button>
+                                                                      </div>
+                                                            </form>
                                                   </div>
                                         </div>
-                                        <div class="card max-w-96 bg-base-100 shadow-xl">
-                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full hover:bg-hoverBg2 text-textColor">
+                                                  <figure><img class="pt-12" src="./images/pentagon.png"
                                                                       alt="Shoes" /></figure>
-                                                  <div class="card-body">
-                                                            <h2 class="card-title">Shoes!</h2>
-                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                                                            <div class="card-actions justify-end">
-                                                                      <button class="btn btn-primary">Buy Now</button>
-                                                            </div>
+                                                  <div class="card-body text-center pb-12 px-8">
+                                                            <h2 class="text-center text-2xl font-bold">Pentagon</h2>
+                                                            <p>Area (A) = 0.5 X p X b</p>
+                                                            <form id="calculate" onsubmit="calculateEveryThing(event,calculatePentagon,'p2','b2','Pentagon')">
+                                                                      <div class="space-x-2">
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="p" id="p2" required>
+                                                                                <span>cm</span>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="b" id="b2" required>
+                                                                                <span>cm</span>
+                                                                      </div>
+                                                                      <div class="card-actions justify-center pt-12">
+                                                                                <button type="submit" id="calculateBtn" class="btn bg-buttonBg border-none w-full text-white">Calculate</button>
+                                                                      </div>
+                                                            </form>
                                                   </div>
                                         </div>
-                                        <div class="card max-w-96 bg-base-100 shadow-xl">
-                                                  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                                        <div class="card max-w-96 rounded-lg border border-solid border-borderColor shadow-xl w-full hover:bg-hoverBg2 text-textColor">
+                                                  <figure><img class="pt-12" src="./images/ellipse.png"
                                                                       alt="Shoes" /></figure>
-                                                  <div class="card-body">
-                                                            <h2 class="card-title">Shoes!</h2>
-                                                            <p>If a dog chews shoes whose shoes does he choose?</p>
-                                                            <div class="card-actions justify-end">
-                                                                      <button class="btn btn-primary">Buy Now</button>
-                                                            </div>
+                                                  <div class="card-body text-center pb-12 px-8">
+                                                            <h2 class="text-center text-2xl font-bold">Ellipse</h2>
+                                                            <p>Area (A) = πab</p>
+                                                            <form id="calculate" onsubmit="calculateEveryThing(event,calculateEllipse,'a','b','Ellipse')">
+                                                                      <div class="space-x-2">
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="a" id="a" required>
+                                                                                <span>cm</span>
+                                                                                <input class="w-24 bg-inputBg outline-none pl-4 placeholder:text-black" type="number" placeholder="b" id="b" required>
+                                                                                <span>cm</span>
+                                                                      </div>
+                                                                      <div class="card-actions justify-center pt-12">
+                                                                                <button type="submit" id="calculateBtn" class="btn bg-buttonBg border-none w-full text-white">Calculate</button>
+                                                                      </div>
+                                                            </form>
                                                   </div>
                                         </div>
                               </div>
-                              <div id="result" class="result-container lg:w-3/12 h-96 rounded-lg border border-solid border-borderColor pl-6">
-                                        <div class="show-calculation">
+                              <div class="result-container relative lg:w-3/12 min-h-96 md:h-full rounded-lg border border-solid border-borderColor pl-6">
+                                        <div id="result" class="show-calculation">
                                                   <h4 class="text-center text-xl text-black underline font-bold">Area Calculation</h4>
                                         </div>
                               </div>
