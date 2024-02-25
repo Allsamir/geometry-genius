@@ -34,9 +34,22 @@ function createResult (name, value) {
  sum++;
  const resultContainer = document.getElementById('result');
  const div = document.createElement('div');
- div.innerHTML = `<span>${sum}.${name}</span> <span class="cm-value">${value}cm<sup>2</sup></span>`;
- div.classList.add('space-x-4', 'py-2', 'pt-3', 'text-black', 'text-lg');
+ div.innerHTML = `<span>${sum}.${name}</span> <span>${value}</span><span class="cm-value pr-4">cm<sup>2</sup></span><button class="convert bg-buttonBg text-white p-2 rounded-lg">Convert to m<sup>2</sup></button>`;
+ div.classList.add('py-2', 'pt-3', 'text-black', 'text-lg');
  resultContainer.appendChild(div)
+ const allButtons = document.getElementsByClassName('convert');
+ for (const singleButton of allButtons) {
+  singleButton.addEventListener('click', (e) => {
+    const cmValue = e.target.parentNode.childNodes[3];
+    console.log(cmValue);
+    const element = e.target.parentNode.childNodes[2];
+    const value = e.target.parentNode.childNodes[2].innerText;
+    const acctualValue = parseFloat(value);
+    const meterValue = acctualValue / 100;
+    element.innerText = meterValue;
+    cmValue.innerHTML = `m<sup>2</sup>`
+  })
+ }
 }
 
 function calculateTriangle(b, h) {
